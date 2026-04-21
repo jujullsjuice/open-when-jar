@@ -19,9 +19,11 @@ jar.addEventListener("click", () => {
   noteText.innerText = notes[randomIndex];
 
   popup.classList.remove("hidden");
+  popup.style.display = "flex";
 
 });
 
 function closeNote() {
   popup.classList.add("hidden");
+  popup.style.display = "none";
 }
