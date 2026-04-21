@@ -36,22 +36,29 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
 
+  display: flex; /* ALWAYS flex */
   justify-content: center;
   align-items: center;
+
+  background: rgba(0,0,0,0.4);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
-/* HIDDEN STATE */
+/* hidden state */
 .hidden {
-  display: none !important;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* VISIBLE STATE */
+/* visible state */
 .show {
-  display: flex !important;
+  opacity: 1;
+  pointer-events: auto;
 }
-
 /* NOTE PAPER */
 .paper {
   background: #fffaf3;
