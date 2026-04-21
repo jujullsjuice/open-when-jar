@@ -25,6 +25,7 @@ const closeBtn = document.getElementById("closeBtn");
 
 jar.addEventListener("click", () => {
   noteText.textContent = notes[currentIndex];
+
   popup.classList.remove("hidden");
   popup.classList.add("show");
 
