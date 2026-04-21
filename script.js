@@ -25,5 +25,5 @@ jar.addEventListener("click", () => {
 });
 
 function closeNote() {
-  popup.classList.add("hidden");
+  document.getElementById("notePopup").classList.add("hidden");
 }
