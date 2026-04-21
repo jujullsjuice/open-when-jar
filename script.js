@@ -1,5 +1,4 @@
 const notes = [
-
 "You don’t have to be everything all the time.",
 "I’m still here with you.",
 "You’re not a burden.",
@@ -8,7 +7,6 @@ const notes = [
 "You’re allowed to rest.",
 "I like being with you.",
 "You matter to me."
-
 ];
 
 const jar = document.getElementById("jar");
@@ -25,6 +23,5 @@ jar.addEventListener("click", () => {
 });
 
 function closeNote() {
-  const popup = document.getElementById("notePopup");
-  popup.style.display = "flex";
+  popup.classList.add("hidden");
 }
