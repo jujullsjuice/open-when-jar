@@ -7,19 +7,18 @@
 
 <body>
 
-<h1>Open When You Need This</h1>
+<h1>open when you need a little reminder ♡</h1>
 
-<div class="jar">
-
-<button onclick="showNote(0)">Open when you're tired</button>
-<button onclick="showNote(1)">Open when you're overthinking</button>
-<button onclick="showNote(2)">Open when we argue</button>
-<button onclick="showNote(3)">Open when you feel alone</button>
-<button onclick="showNote(4)">Open when you're happy</button>
-
+<div class="jar-container">
+  <img src="jar.png" id="jar" />
 </div>
 
-<div id="noteBox"></div>
+<div id="notePopup" class="hidden">
+  <div class="paper">
+    <p id="noteText"></p>
+    <button onclick="closeNote()">close</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 
