@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   justify-content: center;  /* vertical center */
   align-items: center;      /* horizontal center */
-  height: 100vh;            /* full screen height */
+  height: 100vh;
   margin: 0;
 
   font-family: 'Comic Sans MS', cursive;
@@ -29,6 +29,7 @@ h1 {
   transform: scale(1.05);
 }
 
+/* POPUP BACKGROUND */
 #notePopup {
   position: fixed;
   top: 0;
@@ -41,10 +42,17 @@ h1 {
   align-items: center;
 }
 
+/* HIDDEN STATE */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
+/* VISIBLE STATE */
+.show {
+  display: flex !important;
+}
+
+/* NOTE PAPER */
 .paper {
   background: #fffaf3;
   padding: 30px;
@@ -58,6 +66,7 @@ h1 {
   color: #5a4a42;
 }
 
+/* BUTTON */
 button {
   margin-top: 15px;
   padding: 8px 16px;
