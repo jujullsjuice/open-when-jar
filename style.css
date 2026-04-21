@@ -1,5 +1,11 @@
 body {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  height: 100vh;            /* full screen height */
+  margin: 0;
+
   font-family: 'Comic Sans MS', cursive;
   background: #fdf6f0;
 }
@@ -14,7 +20,7 @@ h1 {
 }
 
 #jar {
-  width: 250px;
+  width: 400px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
