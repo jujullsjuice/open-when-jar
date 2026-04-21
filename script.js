@@ -1,19 +1,29 @@
 const notes = [
 
-"You don’t have to carry everything alone. I’m still here.",
-
-"Even when things feel confusing between us, I’m not going anywhere.",
-
-"If we argue again someday, it doesn’t mean we’re breaking. It means we’re still learning each other.",
-
-"You’re not a burden to me. Never were.",
-
-"I like seeing you happy. It makes my day softer."
+"You don’t have to be everything all the time.",
+"I’m still here with you.",
+"You’re not a burden.",
+"I appreciate you so much.",
+"We’ll figure things out together.",
+"You’re allowed to rest.",
+"I like being with you.",
+"You matter to me."
 
 ];
 
-function showNote(index) {
+const jar = document.getElementById("jar");
+const popup = document.getElementById("notePopup");
+const noteText = document.getElementById("noteText");
 
-document.getElementById("noteBox").innerText = notes[index];
+jar.addEventListener("click", () => {
 
+  const randomIndex = Math.floor(Math.random() * notes.length);
+  noteText.innerText = notes[randomIndex];
+
+  popup.classList.remove("hidden");
+
+});
+
+function closeNote() {
+  popup.classList.add("hidden");
 }
