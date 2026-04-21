@@ -1,19 +1,20 @@
 const notes = [
-"I'm with you through the good times, and definitely through the heavy ones.",
-"I admire that you protect your energy when you need space.",
-"I love how we can go from serious to chaotic in minutes.",
-"You’re not difficult to be with.",
-"I admire how much you care.",
-"I love how smart you are.",
-"I hope you are taking care of yourself.",
-"I hope you are eating well.",
-"You’re not a burden.",
-"I appreciate you so much.",
-"We’ll figure things out together.",
-"You’re allowed to rest.",
-"I like being with you.",
-"You do not disappoint me.",
-"You matter to me."
+  "I'm with you through the good times, and definitely through the heavy ones.",
+  "I admire that you protect your energy when you need space.",
+  "I love how we can go from serious to chaotic in minutes.",
+  "You’re not difficult to be with.",
+  "I admire how much you care.",
+  "I love how smart you are.",
+  "I hope you are taking care of yourself.",
+  "I hope you are eating well.",
+  "You’re not a burden.",
+  "I appreciate you so much.",
+  "We’ll figure things out together.",
+  "You’re allowed to rest.",
+  "I like being with you.",
+  "You do not disappoint me.",
+  "You matter to me."
+];
 
 let currentIndex = 0;
 
@@ -23,23 +24,17 @@ const noteText = document.getElementById("noteText");
 const closeBtn = document.getElementById("closeBtn");
 
 jar.addEventListener("click", () => {
-  // show current note
   noteText.textContent = notes[currentIndex];
 
-  // show popup
   popup.classList.remove("hidden");
   popup.classList.add("show");
 
-  // move to next note
   currentIndex++;
 
-  // loop back to start
   if (currentIndex >= notes.length) {
     currentIndex = 0;
   }
 });
-
-const closeBtn = document.getElementById("closeBtn");
 
 closeBtn.addEventListener("click", () => {
   popup.classList.remove("show");
