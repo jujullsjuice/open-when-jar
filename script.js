@@ -14,23 +14,32 @@ const notes = [
 "I like being with you.",
 "You do not disappoint me.",
 "You matter to me."
-];
+
+let currentIndex = 0;
 
 const jar = document.getElementById("jar");
 const popup = document.getElementById("notePopup");
 const noteText = document.getElementById("noteText");
+const closeBtn = document.getElementById("closeBtn");
 
 jar.addEventListener("click", () => {
+  // show current note
+  noteText.textContent = notes[currentIndex];
 
-  const randomIndex = Math.floor(Math.random() * notes.length);
-  noteText.innerText = notes[randomIndex];
-
+  // show popup
   popup.classList.remove("hidden");
-  popup.style.display = "flex";
+  popup.classList.add("show");
 
+  // move to next note
+  currentIndex++;
+
+  // loop back to start
+  if (currentIndex >= notes.length) {
+    currentIndex = 0;
+  }
 });
 
-function closeNote() {
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("show");
   popup.classList.add("hidden");
-  popup.style.display = "none";
-}
+});
