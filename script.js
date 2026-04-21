@@ -39,6 +39,8 @@ jar.addEventListener("click", () => {
   }
 });
 
+const closeBtn = document.getElementById("closeBtn");
+
 closeBtn.addEventListener("click", () => {
   popup.classList.remove("show");
   popup.classList.add("hidden");
